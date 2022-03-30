@@ -1,0 +1,33 @@
+.informationLinks {
+  width: 50%;
+  gap: 4vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .informationLinks {
+    width: 85%;
+    margin-top: 10px;
+  }
+}
+
+.latestRenewalTimeButton,
+.averageRenewalTimeButton,
+.allRenewalTimeButton {
+  background-color: #56537a;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 14px 5px 14px;
+  border: 1px rgba(237, 237, 237) solid;
+  border-radius: 7px;
+}
+
+.latestRenewalTimeButton:hover,
+.averageRenewalTimeButton:hover,
+.allRenewalTimeButton:hover {
+  color: rgb(238, 238, 238);
+  background-color: #7c7ba1;
+  border-color: #7c7ba1;
+}
