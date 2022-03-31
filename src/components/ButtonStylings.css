@@ -3,7 +3,8 @@
   gap: 4vw;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  align-items: center;
+  height: 60px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -18,10 +19,11 @@
 .allRenewalTimeButton {
   background-color: #56537a;
   color: white;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   padding: 5px 14px 5px 14px;
   border: 1px rgba(237, 237, 237) solid;
   border-radius: 7px;
+  height: 40px;
 }
 
 .latestRenewalTimeButton:hover,
@@ -30,4 +32,67 @@
   color: rgb(238, 238, 238);
   background-color: #7c7ba1;
   border-color: #7c7ba1;
+}
+
+.averageDropDownMenuContainer {
+  position: relative;
+}
+
+.averageDropDownMenu {
+  background-color: rgb(238, 238, 238);
+  min-width: 100%;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 95%;
+  visibility: hidden;
+  box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.39);
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in-out 0.15s;
+  -moz-transition: all 0.6s ease-in-out 0.15s;
+  -o-transition: all 0.6s ease-in-out 0.15s;
+  -ms-transition: all 0.6s ease-in-out 0.15s;
+  transition: all 0.6s ease-in-out 0.15s;
+  z-index: 5;
+  border: none;
+  border-radius: 6px;
+}
+
+.averageDropDownMenuShow {
+  background-color: rgb(238, 238, 238);
+  min-width: 100%;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 95%;
+  visibility: visible;
+  box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.39);
+  opacity: 1;
+  -webkit-transition: all 0.6s ease-in-out 0.15s;
+  -moz-transition: all 0.6s ease-in-out 0.15s;
+  -o-transition: all 0.6s ease-in-out 0.15s;
+  -ms-transition: all 0.6s ease-in-out 0.15s;
+  transition: all 0.6s ease-in-out 0.15s;
+  z-index: 5;
+  border: none;
+  border-radius: 6px;
+}
+
+.oneMonthButton,
+.threeMonthButton,
+.sixMonthButton {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(238, 238, 238);
+  font-size: 15px;
+  min-height: 40px;
+  border: none;
+  border-radius: 6px;
+}
+
+.oneMonthButton:hover,
+.threeMonthButton:hover,
+.sixMonthButton:hover {
+  background-color: #7c7ba1;
 }
