@@ -4,7 +4,7 @@
 
 # DacaOne
 
-Crowdsourced USCIS case processing time parser in javascript.
+Crowdsourced USCIS case processing time parser in written in javascript/react.
 
 DacaOne pulls and parses posts from Reddit(specifically /r/DACA), regarding renewals for form I-821D and I-765, processing posts that provide information regarding renewal timelines and length. No more having to manually search pages and pages of posts to gauge current renewal times for form I-821D and I-765 renewals.
 Additionally, DacaOne presents averages for renewal times in given timeframes to better present USCIS processing times and trends.
