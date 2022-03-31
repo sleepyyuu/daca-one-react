@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 .headerTop {
@@ -9,10 +10,9 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bolder;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   color: rgb(241, 238, 238);
-  line-height: 50px;
   height: 50px;
   background-color: #47446d;
   font-size: 1.6rem;
@@ -21,12 +21,12 @@
 
 @media only screen and (max-width: 500px) {
   .headerTop {
-    line-height: 40px;
-    height: 40px;
+    height: 45px;
   }
 }
 
 .contactButton {
+  padding-left: 0.5vw;
   width: 45px;
 }
 
@@ -36,26 +36,30 @@
 }
 
 .infoButton {
+  padding-right: 0.5vw;
   background-color: rgba(255, 255, 255, 0);
   border: none;
-  height: 45px;
-  width: 50px;
 }
 
 .alertContainer {
   font-size: 0.8rem;
   display: flex;
-  width: 65%;
+  width: 80%;
   flex-direction: column;
   gap: 2vh;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
   .alertContainer {
     width: 95%;
-    margin-top: 3%;
     height: 16vh;
-    gap: 10px;
+    gap: 9px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .alertContainer {
+    width: 55%;
   }
 }
 
@@ -68,7 +72,7 @@ h1 {
 .welcomeAlert,
 .officialUscisAlert {
   background-color: rgb(197 211 232 / 83%);
-  padding: 12px;
+  padding: 10px 0px 10px 10px;
   border-left: 12px solid red;
 }
 

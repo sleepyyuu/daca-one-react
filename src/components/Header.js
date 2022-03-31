@@ -34,8 +34,8 @@ export default function Header(props) {
           <div className="headerText">DACA | Processing Times</div>
         </Link>
         <button className="infoButton">
-          <svg id="questionImageButton">
-            <QuestionImage height="40px" width="40px" />
+          <svg id="questionImageButton" height="33px" width="33px">
+            <QuestionImage />
           </svg>
         </button>
       </div>
@@ -87,7 +87,7 @@ export default function Header(props) {
       <div className="alertContainer">
         <div className="welcomeAlert">
           <h1>
-            <b>Notice</b>: This site aggregates form I-821D and form I-765 DACA(deferred action for childhood arrivals)
+            <b>Notice</b>: This site aggregates form I-821D and form I-765 DACA (deferred action for childhood arrivals)
             renewal case processing times to provide time estimates for renewal applicants.
           </h1>
         </div>
