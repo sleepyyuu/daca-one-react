@@ -30,6 +30,11 @@
   width: 45px;
 }
 
+.headerText {
+  color: rgb(241, 238, 238);
+  font-size: 1.5rem;
+}
+
 .infoButton {
   background-color: rgba(255, 255, 255, 0);
   border: none;

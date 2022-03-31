@@ -100,37 +100,39 @@ function App() {
   return (
     <BrowserRouter>
       <Header></Header>
-      <Routes>
-        <Route
-          path="/"
-          index
-          element={
-            <LatestRenewal submission={submissionArray.latest} loadingElement={loadingElement} loading={loading} />
-          }
-        />
-        <Route
-          path="/averageRenewal/:averageMonths"
-          element={
-            <AverageRenewal
-              submission={submissionArray.averageMonth}
-              averageTime={renewalAverage.averageMonth}
-              loadingElement={loadingElement}
-              loading={loading}
-            />
-          }
-        />
-        <Route
-          path="/allRenewal"
-          element={
-            <AllRenewal
-              submission={submissionArray.allMonth}
-              averageTime={renewalAverage.allMonth}
-              loadingElement={loadingElement}
-              loading={loading}
-            />
-          }
-        />
-      </Routes>
+      <div className="mainBody">
+        <Routes>
+          <Route
+            path="/"
+            index
+            element={
+              <LatestRenewal submission={submissionArray.latest} loadingElement={loadingElement} loading={loading} />
+            }
+          />
+          <Route
+            path="/averageRenewal/:averageMonths"
+            element={
+              <AverageRenewal
+                submission={submissionArray.averageMonth}
+                averageTime={renewalAverage.averageMonth}
+                loadingElement={loadingElement}
+                loading={loading}
+              />
+            }
+          />
+          <Route
+            path="/allRenewal"
+            element={
+              <AllRenewal
+                submission={submissionArray.allMonth}
+                averageTime={renewalAverage.allMonth}
+                loadingElement={loadingElement}
+                loading={loading}
+              />
+            }
+          />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

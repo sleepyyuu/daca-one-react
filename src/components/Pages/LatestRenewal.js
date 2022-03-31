@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
-import moment from "moment";
+import "./Renewal.css";
+import "./LatestRenewal.css";
 
 export default function LatestRenewal(props) {
   const { submission, loadingElement, loading } = props;

@@ -1,0 +1,127 @@
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  width: 60%;
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .informationContainer {
+    margin-top: 15px;
+  }
+}
+
+.dataDisclaimer,
+.detailDisclaimer,
+.questionHeader,
+.contactHeader {
+  color: rgb(28, 28, 80);
+  font-weight: bold;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.detailDisclaimer {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .dataDisclaimer,
+  .detailDisclaimer,
+  .questionHeader,
+  .contactHeader {
+    text-align: center;
+  }
+}
+
+.latestRenewalTime,
+.averageRenewalTime,
+.allRenewalTime {
+  font-family: "Roboto", sans-serif;
+  background-color: #56537a;
+  color: white;
+  font-size: 17px;
+  padding: 5px 14px 5px 14px;
+  border: 1px rgba(237, 237, 237) solid;
+  border-radius: 7px;
+}
+
+.latestRenewalTime:hover,
+.averageRenewalTime:hover,
+.allRenewalTime:hover {
+  color: rgb(238, 238, 238);
+  background-color: #7c7ba1;
+  border-color: #7c7ba1;
+}
+
+.latestRenewalDays,
+.averageRenewalDays,
+.allRenewalDays {
+  color: #000000fc;
+  font-weight: 900;
+  padding-top: 5px;
+}
+
+.latestRenewalDetail,
+.averageRenewalDetail,
+.allRenewalDetails,
+.questionBody {
+  border-width: 0;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-image: linear-gradient(to right, rgb(105, 105, 105), rgba(235, 233, 233, 0.39)) 3;
+  font-size: 18px;
+  padding: 3px 0 12px 0;
+  min-width: 50vw;
+  max-width: 50vw;
+  font-size: 20px;
+}
+
+.latestRenewalLink {
+  font-size: 20px;
+}
+
+.latestRenewalLength,
+.averageRenewalMonths,
+.allRenewalLength,
+.contactBody {
+  border-width: 0;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-image: linear-gradient(to right, rgb(105, 105, 105), rgba(235, 233, 233, 0.39)) 3;
+  font-size: 18px;
+  padding-top: 3px;
+  min-width: 50vw;
+  max-width: 50vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .contactBody {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .latestRenewalLength,
+  .averageRenewalMonths,
+  .allRenewalLength {
+    height: 10vw;
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .latestRenewalLength {
+    height: 10vw;
+    line-height: 10vw;
+  }
+}
