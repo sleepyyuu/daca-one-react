@@ -42,7 +42,6 @@ export default function Header(props) {
         <Link to="/">
           <button className="latestRenewalTimeButton">Latest renewal</button>
         </Link>
-
         <div ref={dropDownRef} className="averageDropDownMenuContainer">
           <button className="averageRenewalTimeButton" onClick={dropDownClick}>
             Average renewal

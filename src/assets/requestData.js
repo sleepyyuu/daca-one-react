@@ -1,4 +1,4 @@
-export default async function requestData() {
+async function requestData() {
   let allResponses = [];
   let lastRenewalObject;
   let getSubmission = async function (url) {
@@ -42,3 +42,5 @@ export default async function requestData() {
   ]);
   return allResponses;
 }
+
+export default requestData;
