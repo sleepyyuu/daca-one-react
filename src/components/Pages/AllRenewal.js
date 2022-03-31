@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./Renewal.css";
 import uniqid from "uniqid";
 
@@ -8,12 +7,12 @@ export default function AllRenewal(props) {
     loadingElement
   ) : (
     <div className="informationContainer">
-      <div className="averageRenewalBox">
-        <div className="dataDisclaimer">Renewal Length</div>
-        <div className="averageRenewalMonths">The average renewal from ALL obtainable submissions took</div>
+      <div className="renewalContainer">
+        <div className="renewalLengthTitle">Renewal Length</div>
+        <div className="averageRenewalStatement">The average renewal from ALL obtainable submissions took</div>
         <div className="averageRenewalDays">{averageTime} days</div>
-        <div className="detailDisclaimer">Renewal Details</div>
-        <div className="allRenewalDetails">Pulled from {submission.length} data points</div>
+        <div className="renewalDetailTitle">Renewal Details</div>
+        <div className="renewalAmount">Pulled from {submission.length} data points</div>
         <table className="approvalLinkTable">
           <thead>
             <tr>
@@ -29,7 +28,7 @@ export default function AllRenewal(props) {
                   <td>{post.processingTime} days</td>
                   <td>{post.formattedApprovedDate}</td>
                   <td>
-                    <a href={"https://www.reddit.com" + post.permalink} target="_blank" rel="noreferrer">
+                    <a href={"https://www.reddit.com" + post.submissionData.permalink} target="_blank" rel="noreferrer">
                       view post
                     </a>
                   </td>

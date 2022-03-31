@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "./Renewal.css";
 import uniqid from "uniqid";
@@ -12,12 +11,12 @@ export default function AverageRenewal(props) {
     loadingElement
   ) : (
     <div className="informationContainer">
-      <div className="averageRenewalBox">
-        <div className="dataDisclaimer">Renewal Length</div>
-        <div className="averageRenewalMonths">The average renewal in the past {month[monthText]} month(s) took</div>
+      <div className="renewalContainer">
+        <div className="renewalLengthTitle">Renewal Length</div>
+        <div className="averageRenewalStatement">The average renewal in the past {month[monthText]} month(s) took</div>
         <div className="averageRenewalDays">{averageTime[monthText]} days</div>
-        <div className="detailDisclaimer">Renewal Details</div>
-        <div className="averageRenewalDetail">Pulled from {submission[monthText].length} data points</div>
+        <div className="renewalDetailTitle">Renewal Details</div>
+        <div className="renewalAmount">Pulled from {submission[monthText].length} data points</div>
         <table className="approvalLinkTable">
           <thead>
             <tr>
@@ -33,7 +32,7 @@ export default function AverageRenewal(props) {
                   <td>{post.processingTime} days</td>
                   <td>{post.formattedApprovedDate}</td>
                   <td>
-                    <a href={"https://www.reddit.com" + post.permalink} target="_blank" rel="noreferrer">
+                    <a href={"https://www.reddit.com" + post.submissionData.permalink} target="_blank" rel="noreferrer">
                       view post
                     </a>
                   </td>

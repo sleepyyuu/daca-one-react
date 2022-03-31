@@ -33,11 +33,13 @@ export default function Header(props) {
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="headerText">DACA | Processing Times</div>
         </Link>
-        <button className="infoButton">
-          <svg id="questionImageButton" height="33px" width="33px">
-            <QuestionImage />
-          </svg>
-        </button>
+        <Link to="/infoPage" style={{ textDecoration: "none" }}>
+          <button className="infoButton">
+            <svg id="questionImageButton" height="33px" width="33px">
+              <QuestionImage />
+            </svg>
+          </button>
+        </Link>
       </div>
       <div className="informationLinks">
         <Link to="/">

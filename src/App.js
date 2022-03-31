@@ -1,11 +1,12 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import processData from "./assets/processData";
 import LatestRenewal from "./components/Pages/LatestRenewal";
 import AverageRenewal from "./components/Pages/AverageRenewal";
 import AllRenewal from "./components/Pages/AllRenewal";
+import InfoPage from "./components/Pages/InfoPage";
 import moment from "moment";
 
 function App() {
@@ -131,6 +132,7 @@ function App() {
               />
             }
           />
+          <Route path="/infoPage" element={<InfoPage />} />
         </Routes>
       </div>
     </BrowserRouter>

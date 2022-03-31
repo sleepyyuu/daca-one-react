@@ -12,12 +12,12 @@
 
 @media only screen and (max-width: 500px) {
   .informationContainer {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
-.dataDisclaimer,
-.detailDisclaimer,
+.renewalLengthTitle,
+.renewalDetailTitle,
 .questionHeader,
 .contactHeader {
   color: rgb(28, 28, 80);
@@ -30,86 +30,65 @@
   text-align: left;
 }
 
-.detailDisclaimer {
+.renewalDetailTitle {
   margin-top: 40px;
 }
 
 @media only screen and (max-width: 500px) {
-  .dataDisclaimer,
-  .detailDisclaimer,
+  .renewalLengthTitle,
+  .renewalDetailTitle,
   .questionHeader,
   .contactHeader {
     text-align: center;
   }
 }
 
-.latestRenewalDays,
-.averageRenewalDays,
-.allRenewalDays {
+.averageRenewalDays {
   color: #000000fc;
   font-weight: 900;
   padding-top: 5px;
 }
 
-.latestRenewalDetail,
-.averageRenewalDetail,
-.allRenewalDetails,
-.questionBody {
-  border-width: 0;
-  border-top: 2px solid rgb(0, 0, 0);
-  border-image: linear-gradient(to right, rgb(105, 105, 105), rgba(235, 233, 233, 0.39)) 3;
-  font-size: 18px;
-  padding: 3px 0 12px 0;
-  min-width: 50vw;
-  max-width: 50vw;
-  font-size: 20px;
-}
-
-@media only screen and (max-width: 500px) {
-  .latestRenewalDetail,
-  .averageRenewalDetail,
-  .allRenewalDetails,
-  .questionBody {
-    min-width: 90vw;
-    max-width: 90vw;
-  }
-}
-
-.latestRenewalLink {
-  font-size: 20px;
-}
-
-.latestRenewalLength,
-.averageRenewalMonths,
-.allRenewalLength,
+.renewalAmount,
+.questionBody,
+.averageRenewalStatement,
+.latestRenewalStatement,
 .contactBody {
   border-width: 0;
   border-top: 2px solid rgb(0, 0, 0);
-  border-image: linear-gradient(to right, rgb(105, 105, 105), rgba(235, 233, 233, 0.39)) 3;
-  font-size: 18px;
   padding-top: 3px;
+  border-image: linear-gradient(to right, rgb(105, 105, 105), rgba(235, 233, 233, 0.39)) 3;
   min-width: 50vw;
   max-width: 50vw;
+  font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 500px) {
-  .latestRenewalLength,
-  .averageRenewalMonths,
-  .allRenewalLength {
-    height: 10vw;
-    min-width: 90vw;
-    max-width: 90vw;
-  }
-
-  .latestRenewalLength {
-    line-height: 10vw;
-  }
+.questionBody,
+.contactBody {
 }
 
+.renewalAmount,
+.questionBody {
+  padding: 3px 0 12px 0;
+}
 @media only screen and (max-width: 500px) {
+  .renewalAmount,
+  .questionBody,
+  .averageRenewalStatement,
+  .latestRenewalStatement,
   .contactBody {
     min-width: 90vw;
     max-width: 90vw;
+  }
+  .latestRenewalStatement {
+    height: 10vw;
+    line-height: 6vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .averageRenewalStatement {
+    height: 10vw;
   }
 }
 
