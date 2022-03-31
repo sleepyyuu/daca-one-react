@@ -3,6 +3,7 @@ import { ReactComponent as QuestionImage } from "../assets/question.svg";
 import "./Header.css";
 import "./ButtonStylings.css";
 import { useEffect, useState, useRef } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function Header(props) {
   const dropDownRef = useRef(null);
@@ -38,18 +39,29 @@ export default function Header(props) {
         </button>
       </div>
       <div className="informationLinks">
-        <button className="latestRenewalTimeButton">Latest renewal</button>
+        <Link to="/">
+          <button className="latestRenewalTimeButton">Latest renewal</button>
+        </Link>
+
         <div ref={dropDownRef} className="averageDropDownMenuContainer">
           <button className="averageRenewalTimeButton" onClick={dropDownClick}>
             Average renewal
           </button>
           <div className={dropDownActive ? "averageDropDownMenuShow" : "averageDropDownMenu"}>
-            <button className="oneMonthButton">1 month</button>
-            <button className="threeMonthButton">3 month</button>
-            <button className="sixMonthButton">6 month</button>
+            <Link to="/averageRenewal/oneMonth">
+              <button className="oneMonthButton">1 month</button>
+            </Link>
+            <Link to="/averageRenewal/threeMonth">
+              <button className="threeMonthButton">3 month</button>
+            </Link>
+            <Link to="/averageRenewal/sixMonth">
+              <button className="sixMonthButton">6 month</button>
+            </Link>
           </div>
         </div>
-        <button className="allRenewalTimeButton">All renewals</button>
+        <Link to="/allRenewal">
+          <button className="allRenewalTimeButton">All renewals</button>
+        </Link>
       </div>
       <div className="alertContainer">
         <div className="welcomeAlert">

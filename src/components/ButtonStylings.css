@@ -19,11 +19,11 @@
 .allRenewalTimeButton {
   background-color: #56537a;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   padding: 5px 14px 5px 14px;
   border: 1px rgba(237, 237, 237) solid;
   border-radius: 7px;
-  height: 40px;
+  height: 35px;
 }
 
 .latestRenewalTimeButton:hover,
@@ -83,6 +83,7 @@
 .oneMonthButton,
 .threeMonthButton,
 .sixMonthButton {
+  width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: rgb(238, 238, 238);
   font-size: 15px;
