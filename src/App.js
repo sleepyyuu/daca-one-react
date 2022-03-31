@@ -9,7 +9,7 @@ import AllRenewal from "./components/Pages/AllRenewal";
 import moment from "moment";
 
 function App() {
-  const [submission, setSubmission] = useState({
+  const [submissionArray, setSubmissionArray] = useState({
     latest: [],
     averageMonth: { oneMonth: [], threeMonth: [], sixMonth: [] },
     allMonth: [],
@@ -18,6 +18,15 @@ function App() {
     averageMonth: { oneMonth: 0, threeMonth: 0, sixMonth: 0 },
     allMonth: 0,
   });
+  const [loading, setLoading] = useState(true);
+  const loadingElement = (
+    <div className="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
   useEffect(() => {
     async function fetchData() {
       let renewalSubmission = await processData();
@@ -75,35 +84,51 @@ function App() {
       let threeMonthAverage = Math.round(threeMonthSum / threeMonthCounter);
       let sixMonthAverage = Math.round(sixMonthSum / sixMonthCounter);
       let allMonthAverage = Math.round(allSum / allCounter);
-
-      setSubmission({
+      setSubmissionArray({
         latest: latestRenewalArray,
-        oneMonth: oneMonthArray,
-        threeMonth: threeMonthArray,
-        sixMonth: sixMonthArray,
+        averageMonth: { oneMonth: oneMonthArray, threeMonth: threeMonthArray, sixMonth: sixMonthArray },
         allMonth: renewalSubmission,
       });
       setRenewalAverage({
-        oneMonth: oneMonthAverage,
-        threeMonth: threeMonthAverage,
-        sixMonth: sixMonthAverage,
+        averageMonth: { oneMonth: oneMonthAverage, threeMonth: threeMonthAverage, sixMonth: sixMonthAverage },
         allMonth: allMonthAverage,
       });
+      setLoading(false);
     }
     fetchData();
   }, []);
   return (
     <BrowserRouter>
-      <Header setSubmission={setSubmission}></Header>
+      <Header></Header>
       <Routes>
-        <Route path="/" index element={<LatestRenewal submission={submission.latest} />} />
+        <Route
+          path="/"
+          index
+          element={
+            <LatestRenewal submission={submissionArray.latest} loadingElement={loadingElement} loading={loading} />
+          }
+        />
         <Route
           path="/averageRenewal/:averageMonths"
-          element={<AverageRenewal submission={submission.averageMonth} averageTime={renewalAverage.averageMonth} />}
+          element={
+            <AverageRenewal
+              submission={submissionArray.averageMonth}
+              averageTime={renewalAverage.averageMonth}
+              loadingElement={loadingElement}
+              loading={loading}
+            />
+          }
         />
         <Route
           path="/allRenewal"
-          element={<AllRenewal submission={submission.allMonth} averageTime={renewalAverage.allMonth} />}
+          element={
+            <AllRenewal
+              submission={submissionArray.allMonth}
+              averageTime={renewalAverage.allMonth}
+              loadingElement={loadingElement}
+              loading={loading}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

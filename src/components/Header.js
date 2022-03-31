@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 
 export default function Header(props) {
+  const { setCurrentSelection } = props;
   const dropDownRef = useRef(null);
   const [dropDownActive, setDropDownActive] = useState(false);
   const dropDownClick = () => {
@@ -47,13 +48,13 @@ export default function Header(props) {
             Average renewal
           </button>
           <div className={dropDownActive ? "averageDropDownMenuShow" : "averageDropDownMenu"}>
-            <Link to="/averageRenewal/oneMonth">
+            <Link to="/averageRenewal/oneMonth" state={{ month: "oneMonth" }}>
               <button className="oneMonthButton">1 month</button>
             </Link>
-            <Link to="/averageRenewal/threeMonth">
+            <Link to="/averageRenewal/threeMonth" state={{ month: "threeMonth" }}>
               <button className="threeMonthButton">3 month</button>
             </Link>
-            <Link to="/averageRenewal/sixMonth">
+            <Link to="/averageRenewal/sixMonth" state={{ month: "sixMonth" }}>
               <button className="sixMonthButton">6 month</button>
             </Link>
           </div>
