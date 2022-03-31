@@ -48,6 +48,7 @@ export default function Header(props) {
         <div ref={dropDownRef} className="averageDropDownMenuContainer">
           <button className="averageRenewalTimeButton" onClick={dropDownClick}>
             Average renewal
+            <div className="dropDownIcon">⌄</div>
           </button>
           <div className={dropDownActive ? "averageDropDownMenuShow" : "averageDropDownMenu"}>
             <Link to="/averageRenewal/oneMonth" state={{ month: { oneMonth: 1 } }}>
@@ -57,7 +58,7 @@ export default function Header(props) {
                   setDropDownActive(false);
                 }}
               >
-                1 month
+                &nbsp;&nbsp;&nbsp;1 Month
               </button>
             </Link>
             <Link to="/averageRenewal/threeMonth" state={{ month: { threeMonth: 3 } }}>
@@ -67,7 +68,7 @@ export default function Header(props) {
                   setDropDownActive(false);
                 }}
               >
-                3 month
+                &nbsp;&nbsp;&nbsp;3 Month
               </button>
             </Link>
             <Link to="/averageRenewal/sixMonth" state={{ month: { sixMonth: 6 } }}>
@@ -77,7 +78,7 @@ export default function Header(props) {
                   setDropDownActive(false);
                 }}
               >
-                6 month
+                &nbsp;&nbsp;&nbsp;6 Month
               </button>
             </Link>
           </div>
