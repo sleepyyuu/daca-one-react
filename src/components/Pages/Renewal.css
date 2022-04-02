@@ -76,12 +76,6 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .averageRenewalStatement {
-    height: 10px;
-  }
-}
-
 .approvalLinkTable {
   border: 1px solid #ddd;
   margin-left: auto;
