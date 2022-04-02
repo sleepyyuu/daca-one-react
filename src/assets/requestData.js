@@ -23,13 +23,7 @@ async function requestData() {
         count += 100;
       } while (response.length === 100);
     } catch (error) {
-      //setstate to error here. return error jsx element?
-      let informationContainer = document.querySelector(".informationContainer");
-      informationContainer.removeChild(informationContainer.lastElementChild);
-      let errorBlock = document.createElement("div");
-      errorBlock.classList.add("errorBlock");
-      errorBlock.textContent = "Please refresh, error contacting Reddit";
-      informationContainer.appendChild(errorBlock);
+      return allResponses;
     }
   };
 

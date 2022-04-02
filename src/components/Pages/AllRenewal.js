@@ -2,7 +2,10 @@ import "./Renewal.css";
 import uniqid from "uniqid";
 
 export default function AllRenewal(props) {
-  const { submission, averageTime, loadingElement, loading } = props;
+  const { submission, averageTime, loadingElement, loading, errorElement, hasError } = props;
+  if (hasError) {
+    return errorElement;
+  }
   return loading ? (
     loadingElement
   ) : (

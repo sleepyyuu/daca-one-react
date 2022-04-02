@@ -3,7 +3,7 @@ import "./Renewal.css";
 import uniqid from "uniqid";
 
 export default function AverageRenewal(props) {
-  const { submission, averageTime, loadingElement, loading } = props;
+  const { submission, averageTime, loadingElement, loading, errorElement, hasError } = props;
   const { averageMonths } = useParams();
   let numMonth = 0;
   if (averageMonths === "oneMonth") {
@@ -12,6 +12,9 @@ export default function AverageRenewal(props) {
     numMonth = 3;
   } else if (averageMonths === "sixMonth") {
     numMonth = 6;
+  }
+  if (hasError) {
+    return errorElement;
   }
   return loading === null || loading ? (
     loadingElement
