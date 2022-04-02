@@ -51,7 +51,7 @@ export default function Header(props) {
             <div className="dropDownIcon">⌄</div>
           </button>
           <div className={dropDownActive ? "averageDropDownMenuShow" : "averageDropDownMenu"}>
-            <Link to="/averageRenewal/oneMonth" state={{ month: { oneMonth: 1 } }}>
+            <Link to="/averageRenewal/oneMonth">
               <button
                 className="oneMonthButton"
                 onClick={() => {
@@ -61,7 +61,7 @@ export default function Header(props) {
                 &nbsp;&nbsp;&nbsp;1 Month
               </button>
             </Link>
-            <Link to="/averageRenewal/threeMonth" state={{ month: { threeMonth: 3 } }}>
+            <Link to="/averageRenewal/threeMonth">
               <button
                 className="threeMonthButton"
                 onClick={() => {
@@ -71,7 +71,7 @@ export default function Header(props) {
                 &nbsp;&nbsp;&nbsp;3 Month
               </button>
             </Link>
-            <Link to="/averageRenewal/sixMonth" state={{ month: { sixMonth: 6 } }}>
+            <Link to="/averageRenewal/sixMonth">
               <button
                 className="sixMonthButton"
                 onClick={() => {
