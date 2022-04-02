@@ -26,7 +26,7 @@ let processSubmissions = async () => {
     submission.selftext = submission.selftext.toLowerCase();
     let advancedParoleKeywords = ["advanced", "advanced parole"];
     for (let keyword of advancedParoleKeywords) {
-      if (submission.link_flair_text == "Advanced Parole") {
+      if (submission.link_flair_text === "Advanced Parole") {
         return true;
       } else {
         if (submission.title.includes(keyword) || submission.selftext.includes(keyword)) {
