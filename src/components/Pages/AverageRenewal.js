@@ -7,7 +7,7 @@ export default function AverageRenewal(props) {
   const location = useLocation();
   const { month } = location.state;
   const monthText = Object.keys(month)[0];
-  return loading ? (
+  return loading === null || loading ? (
     loadingElement
   ) : (
     <div className="informationContainer">

@@ -10,12 +10,6 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 500px) {
-  .informationContainer {
-    margin-top: 0;
-  }
-}
-
 .renewalLengthTitle,
 .renewalDetailTitle,
 .questionHeader,
@@ -84,7 +78,7 @@
 
 @media only screen and (max-width: 500px) {
   .averageRenewalStatement {
-    height: 10vw;
+    height: 10px;
   }
 }
 

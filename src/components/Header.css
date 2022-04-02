@@ -52,7 +52,6 @@
 @media only screen and (max-width: 650px) {
   .alertContainer {
     width: 95%;
-    height: 16vh;
     gap: 9px;
   }
 }

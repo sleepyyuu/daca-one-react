@@ -26,7 +26,7 @@ body {
 }
 
 .lds-ring {
-  margin-top: 1%;
+  margin-top: 3%;
   display: inline-block;
   position: relative;
   width: 90px;
@@ -35,7 +35,7 @@ body {
 
 @media only screen and (max-width: 500px) {
   .lds-ring {
-    margin-top: 10%;
+    margin-top: 30px;
   }
 }
 .lds-ring div {
