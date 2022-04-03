@@ -33,6 +33,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       let renewalSubmission = await processData();
+      console.log(renewalSubmission);
       if (renewalSubmission.length === 0) {
         setHasError(true);
       } else {
