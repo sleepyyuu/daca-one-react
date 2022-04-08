@@ -90,8 +90,7 @@ export default function Header(props) {
       <div className="alertContainer">
         <div className="welcomeAlert">
           <h1>
-            <b>Notice</b>: This site aggregates form I-821D and form I-765 DACA (deferred action for childhood arrivals)
-            renewal case processing times to provide time estimates for renewal applicants.
+            <b>Notice</b>: This site shows current renewal times for DACA renewals parsed from posts on Reddit. (Form I-821D and form I-765 for DACA(deferred action for childhood arrivals))
           </h1>
         </div>
         <div className="officialUscisAlert">
