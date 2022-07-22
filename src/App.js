@@ -85,7 +85,7 @@ function App() {
         oneMonthArray.sort(compareFunctionDate);
         threeMonthArray.sort(compareFunctionDate);
         sixMonthArray.sort(compareFunctionDate);
-        latestRenewalArray.push(oneMonthArray[0]);
+        latestRenewalArray.push(renewalSubmission[0]);
         let oneMonthAverage = Math.round(oneMonthSum / oneMonthCounter);
         let threeMonthAverage = Math.round(threeMonthSum / threeMonthCounter);
         let sixMonthAverage = Math.round(sixMonthSum / sixMonthCounter);
@@ -115,9 +115,7 @@ function App() {
             <Route
               path="/"
               index
-              element={
-                <LatestRenewal submission={submissionArray.latest} loadingElement={loadingElement} loading={loading} />
-              }
+              element={<LatestRenewal submission={submissionArray.latest} loadingElement={loadingElement} loading={loading} />}
             />
             <Route
               path="/averageRenewal/:averageMonths"
